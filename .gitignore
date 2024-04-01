@@ -446,3 +446,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+Client/.angular/cache
+Client/dist
+
