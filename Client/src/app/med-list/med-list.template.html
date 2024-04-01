@@ -1,0 +1,60 @@
+<div class="grid">
+  <div class="col-12 border-bottom-1 surface-border text-right">
+    <button pButton pRipple label="Add Medication" icon="pi pi-plus" class="p-button-outlined p-button-primary w-3 mr-2" (click)="store.addMedication()"></button>
+  </div>
+  <div class="col-12 md:col-6 xl:col-4 p-3" *ngFor="let medication of store.medications | store">
+    <div class="shadow-2 border-round p-4">
+      <div class="flex border-bottom-1 surface-border pb-4">
+        <i class="mr-3 material-icons" style="font-size: 2rem">medication</i>
+        <div class="flex flex-column align-items-start">
+          <span class="text-xl text-900 font-medium mb-1">{{medication.drugName}}</span>
+          <span class="text-600 font-medium mb-2">RX#: {{medication.rxNumber}}</span>
+          <span class="bg-blue-50 text-blue-400 border-round inline-flex py-1 px-2 text-sm">{{medication.directions}}</span>
+        </div>
+      </div>
+      <div class="flex justify-content-between pt-4">
+        <button pButton pRipple label="View" icon="pi pi-search" class="p-button-outlined p-button-secondary w-6 mr-2" (click)="store.selectMedication(medication.rxNumber)"></button>
+        <button pButton pRipple label="Refill" icon="pi pi-refresh" class="p-button-outlined p-button-secondary w-6 ml-2"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-dialog header="Medication Detail" [visible]="store.selectedMedication | store" (visibleChange)="onDialogChange($event)" [style]="{width: '50vw'}" [modal]="true">
+  <div class="surface-card border-round p-fluid" *ngIf="store.selectedMedication | store as medication">
+    <div class="grid formgrid p-fluid">
+      <div class="field mb-4 col-12">
+        <label for="drug_name" class="font-medium text-900">Drug Name</label>
+        <input id="drug_name" type="text" pInputText [(ngModel)]="medication.drugName" />
+      </div>
+      <div class="field mb-4 col-12 md:col-4">
+        <label for="strength" class="font-medium text-900">Strength</label>
+        <input id="strength" type="text" pInputText [(ngModel)]="medication.strength" />
+      </div>
+      <div class="field mb-4 col-12 md:col-4">
+        <label for="quantity" class="font-medium text-900">Quantity</label>
+        <input id="quantity" type="text" pInputText [(ngModel)]="medication.quantity" />
+      </div>
+      <div class="field mb-4 col-12 md:col-4">
+        <label for="refills" class="font-medium text-900">Refills</label>
+        <p-inputNumber inputId="refills" type="text" class="flex-1" [(ngModel)]="medication.refills"></p-inputNumber>
+      </div>
+      <div class="surface-border border-top-1 opacity-50 mb-4 col-12"></div>
+      <div class="field mb-4 col-12 md:col-4">
+        <label for="rxNumber" class="font-medium text-900">Rx Number</label>
+        <input id="rxNumber" type="text" pInputText [(ngModel)]="medication.rxNumber" />
+      </div>
+      <div class="field mb-4 col-12 md:col-8">
+        <label for="prescriber" class="font-medium text-900">Prescriber</label>
+        <input id="prescriber" type="text" pInputText [(ngModel)]="medication.prescriber" />
+      </div>
+      <div class="surface-border border-top-1 opacity-50 mb-4 col-12"></div>
+      <div class="field mb-4 col-12">
+        <label for="directions" class="font-medium text-900">Directions</label>
+        <textarea id="directions" pInputTextarea [autoResize]="true" [rows]="5" [(ngModel)]="medication.directions"></textarea>
+      </div>
+      <div class="surface-border border-top-1 opacity-50 mb-4 col-12"></div>
+    </div>
+    <button pButton pRipple label="Save Medication" icon="pi pi-file" class="w-auto" (click)="store.save()"></button>
+  </div>
+</p-dialog>
