@@ -37,7 +37,7 @@ namespace MedIntakeDemo.Api.Configuration
                 o.ApiVersionReader = new HeaderApiVersionReader();
             });
 
-            services.AddSingleton<IStorageService, InMemoryStorageService>();
+            services.AddDemoStorage();
 
             services.AddCors(opts =>
             {
