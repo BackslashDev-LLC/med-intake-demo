@@ -19,6 +19,7 @@ import { DialogModule } from "primeng/dialog";
 import { InputNumberModule } from "primeng/inputnumber";
 import { CheckboxModule } from "primeng/checkbox";
 import { InputTextareaModule } from "primeng/inputtextarea";
+import { FileUploadModule } from "primeng/fileupload";
 
 @NgModule({
   imports: [
@@ -39,6 +40,7 @@ import { InputTextareaModule } from "primeng/inputtextarea";
     InputNumberModule,
     CheckboxModule,
     InputTextareaModule,
+    FileUploadModule,
   ],
   declarations: [AppComponent, MedListComponent, MedEntryComponent, StoreObjectPipe],
   providers: [],

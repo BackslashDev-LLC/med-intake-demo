@@ -1,6 +1,18 @@
 <div class="grid">
   <div class="col-12 border-bottom-1 surface-border text-right">
-    <button pButton pRipple label="Add Medication" icon="pi pi-plus" class="p-button-outlined p-button-primary w-3 mr-2" (click)="store.addMedication()"></button>
+    <div class="flex justify-content-end">
+      <p-fileUpload
+        mode="basic"
+        chooseLabel="Upload"
+        name="label"
+        url="https:/localhost:7160/api/medications/upload"
+        accept="image/*"
+        [maxFileSize]="1000000"
+        (onUpload)="onUpload($event)"
+        [auto]="true"
+      ></p-fileUpload>
+      <button pButton pRipple label="Add Medication" icon="pi pi-plus" class="p-button-outlined p-button-primary w-3 mr-2 ml-2" (click)="store.addMedication()"></button>
+    </div>
   </div>
   <div class="col-12 md:col-6 xl:col-4 p-3" *ngFor="let medication of store.medications | store">
     <div class="shadow-2 border-round p-4">
