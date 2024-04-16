@@ -22,4 +22,10 @@ export class MedListComponent implements AfterViewInit {
       this.store.closeDialog();
     }
   }
+
+  onUpload(event: any) {
+    let body = event.originalEvent.body;
+    console.log(body);
+    this.store.addMedicationFromLabel(body);
+  }
 }

@@ -23,6 +23,11 @@ export class AppStore {
     this.selectedMedication.set(newRx);
   }
 
+  addMedicationFromLabel(med: RxModel) {
+    med.isNew = true;
+    this.selectedMedication.set(med);
+  }
+
   closeDialog() {
     this.selectedMedication.set(undefined);
   }

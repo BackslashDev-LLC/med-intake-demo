@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.HttpOverrides;
 using MedIntakeDemo.Api.Services;
+using BackslashDev.LLMTools.ImgToJson.Config;
 
 namespace MedIntakeDemo.Api.Configuration
 {
@@ -38,6 +39,7 @@ namespace MedIntakeDemo.Api.Configuration
             });
 
             services.AddDemoStorage();
+            services.AddImgToJson(configuration);
 
             services.AddCors(opts =>
             {
