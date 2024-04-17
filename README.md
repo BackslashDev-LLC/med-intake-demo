@@ -6,23 +6,30 @@ The purpose of this demo is to show how easy it is to add image understanding ca
 
 ## Med Intake
 
-The example here is a form used to input data around pre-existing prescriptions. This is a use-case we see time and again with our customers in healthcare. Put simply, this is a data-entry screne for a user to manually review an Rx Label and manually enter the information from the label.
+The example here is a form used to input data around pre-existing prescriptions. This is a use-case we see time and again with our customers in healthcare.
+Put simply, this is a data-entry screen for a user to manually review a Rx Label and manually enter the information from the label.
 
 The improvement in the user experience of this example comes from the ability for the user to take a simple picture of the label and have the data extracted quickly and automatically, pre-populating the data entry form.
 
 ### Important Note
 
-At this point, it is not possible to obtain a BAA from OpenAI to use the GPT4 Vision Service due to data retention policies. If you are a HIPAA covered entity, carefully review the relevant HIPAA rules before implementing this service. OpenAI services provided by Microsoft Azure may be a better fit today. This is flexible, and it is likely that OpenAI will make this service available with a BAA soon.
+At this point, it is not possible to obtain a BAA from OpenAI to use the GPT4 Vision Service due to data retention policies.
+If you are a HIPAA covered entity, carefully review the relevant HIPAA rules before implementing this service.
+OpenAI services provided by Microsoft Azure may be a better fit today.
+This is flexible, and it is likely that OpenAI will make this service available with a BAA soon.
 
 ## For Developers
 
-The purpose of this demo is to show how easy it is to add image understanding in an existing application. Historically this would have required implementing a complex OCR tool, or training a custom AI model. Now, the changes can be made with just a few lines of C# with the results showing up in the classes you're already using quickly.
+The purpose of this demo is to show how easy it is to add image understanding in an existing application.
+Historically this would have required implementing a complex OCR tool, or training a custom AI model.
+Now, the changes can be made with just a few lines of C# with the results showing up in the classes you're already using quickly.
 
 For full details on the integration of img-to-json with an existing project, please check out the [explainer video]().
 
-## Runnng the Project
+## Running the Project
 
-This repository contains an Angular application, and a C# .NET Web API. It is assumed that your development environment is already configured for these technologies.
+This repository contains an Angular application, and a C# .NET Web API.
+It is assumed that your development environment is already configured for these technologies.
 
 ### Angular
 
