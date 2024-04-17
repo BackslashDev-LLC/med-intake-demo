@@ -24,7 +24,7 @@ The purpose of this demo is to show how easy it is to add image understanding in
 Historically this would have required implementing a complex OCR tool, or training a custom AI model.
 Now, the changes can be made with just a few lines of C# with the results showing up in the classes you're already using quickly.
 
-For full details on the integration of img-to-json with an existing project, please check out the [explainer video]().
+For full details on the integration of img-to-json with an existing project, please check out the [explainer video](https://youtu.be/5fOBenu3iTI?si=TEXcQkzsN7ipyWC4).
 
 ## Running the Project
 
@@ -60,4 +60,4 @@ If you're interested in learning more, here are some resources you might find he
 - [OpenAI GPT4 Vision Documentation](https://platform.openai.com/docs/guides/vision)
 - [Our Blog Post - Image Understanding with OpenAI and C#](https://www.backslashdev.com/blogs/image-understanding-with-openai-and-cs)
 - [The img-to-json library](https://github.com/BackslashDev-LLC/img-to-json)
-- [Watch John Ackerman Explain img-to-js]()
+- [Watch John Ackerman Explain img-to-js](https://youtu.be/5fOBenu3iTI?si=TEXcQkzsN7ipyWC4)
